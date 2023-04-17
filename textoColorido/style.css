@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box
+}
+
+:root {
+    --azul: #186cb8;
+    --verde: #2a9a9f;
+    --amarelo: #f1b211;
+    --laranja: #e83611;
+    --vermelho: #f9002f;
+}
+
+.wrapper {
+    background: #000;
+    line-height: 1;
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    min-height: calc(100vh - 16px);
+}
+
+h1 {
+    font-family: "Exo", sans-serif;
+    font-size: 15vw;
+    font-weight: 900;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    margin: auto;
+    text-transform: uppercase;
+    background: linear-gradient(219deg, 
+    var(--verde) 20%, 
+    var(--amarelo) 40%, 
+    var(--laranja) 60%, 
+    var(--vermelho) 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Bolinhas nos cantos */
+.container {
+    padding: 1.5rem;
+    text-align: center;
+    background: radial-gradient(circle at 1.4% 1.4%, var(--azul) .8%, transparent .8%), 
+    radial-gradient(circle at 5.5% 3%, var(--verde) .45%, transparent .45%), 
+    radial-gradient(circle at 2.5% 3.5%, var(--amarelo) .5%, transparent .5%), 
+    radial-gradient(circle at 4.5% 1.2%, var(--laranja) .25%, transparent .25%), 
+    radial-gradient(circle at 98% 98%, var(--azul) .8%, transparent .8%), 
+    radial-gradient(circle at 95% 95%, var(--verde) .45%, transparent .45%), 
+    radial-gradient(circle at 94.5% 97.5%, var(--amarelo) .5%, transparent .5%), 
+    radial-gradient(circle at 98.5% 95.5%, var(--vermelho) .25%, transparent .25%);
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 6.5rem;
+    }
+}

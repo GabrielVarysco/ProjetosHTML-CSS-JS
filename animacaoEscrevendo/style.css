@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #186cb8;
+    --verde: #2a9a9f;
+    --amarelo: #f1b211;
+    --laranja: #e83611;
+    --vermelho: #f9002f;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #eee;
+}
+
+.divTexto {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divTexto p {
+    font-size: 3rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.divTexto p span.texto {
+    font-weight: normal;
+    width: min-content;
+    margin: auto;
+    background: linear-gradient(219deg, 
+    var(--verde) 20%, 
+    var(--amarelo) 40%, 
+    var(--laranja) 60%, 
+    var(--vermelho) 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.divTexto p span.escrita {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+
+.divTexto p span.escrita.typing {
+    animation: none;
+}
+
+
+/* Redes sociais */
+          
+
+.redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100vw;
+}
+
+#twitter,
+#github,
+#facebook {
+    font-size: 80px;
+    background-color: #18191f;
+    color: #fff;
+    box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080, 2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080;
+    border-radius: 29px;
+    padding: 11px 19px;
+    margin: 0 40px;
+    animation: animate 3s linear infinite;
+    text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
+}
+
+
+/* Caso queira colocar delay nas animações */
+
+#twitter {
+    animation-delay: 0.5s;
+}
+
+#facebook {
+    animation-delay: 0.5s;
+}
+
+#github {
+    animation-delay: 0.5s;
+}
+
+@keyframes animate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+            
